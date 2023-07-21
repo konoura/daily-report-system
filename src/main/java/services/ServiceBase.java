@@ -7,10 +7,10 @@ import utils.DBUtil;
 /**
  * DB接続に関わる共通処理を行うクラス
  */
-
 public class ServiceBase {
+
     /**
-     * EntityManagerクラス
+     * EntityManagerインスタンス
      */
     protected EntityManager em = DBUtil.createEntityManager();
 
@@ -18,7 +18,7 @@ public class ServiceBase {
      * EntityManagerのクローズ
      */
     public void close() {
-        if(em.isOpen()) {
+        if (em.isOpen()) {
             em.close();
         }
     }
